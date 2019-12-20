@@ -6,11 +6,14 @@ namespace Domain\Model;
 
 class User
 {
-    private string $id;
+    /** @var string */
+    private $id;
 
-    private string $name;
+    /** @var string */
+    private $name;
 
-    public array $attr = [];
+    /** @var array */
+    public $attr = [];
 
     public function __construct(string $id, string $name)
     {

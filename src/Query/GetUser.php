@@ -6,7 +6,8 @@ namespace App\Query;
 
 class GetUser
 {
-    private string $id;
+    /** @var string */
+    private $id;
 
     public function __construct(string $id)
     {

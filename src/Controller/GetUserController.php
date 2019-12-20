@@ -12,7 +12,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class GetUserController
 {
-    private CommandBus $commandBus;
+    /* @var CommandBus */
+    private $commandBus;
 
     public function __construct(CommandBus $commandBus)
     {
