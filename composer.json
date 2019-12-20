@@ -23,12 +23,16 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Domain\\": "src/Domain/",
+            "Infra\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "tests\\App\\": "tests/",
+            "tests\\Domain\\": "tests/Domain/",
+            "tests\\Infra\\": "tests/"
         }
     },
     "replace": {
