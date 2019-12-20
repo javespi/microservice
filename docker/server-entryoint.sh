@@ -2,4 +2,4 @@
 
 cd /var/www/microservice
 rm -Rf var/
-php -S 0.0.0.0:8200 -t public
+php vendor/bin/ppm start --host 0.0.0.0 --port 8200 --workers 5 --bootstrap Symfony --bridge HttpKernel --app-env=prod

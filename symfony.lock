@@ -20,6 +20,9 @@
     "doctrine/lexer": {
         "version": "1.2.0"
     },
+    "evenement/evenement": {
+        "version": "v3.0.1"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -31,6 +34,9 @@
         "files": [
             ".php_cs.dist"
         ]
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
     },
     "league/tactician": {
         "version": "v1.0.3"
@@ -59,14 +65,62 @@
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
     },
+    "php-pm/httpkernel-adapter": {
+        "version": "2.0.2"
+    },
+    "php-pm/php-pm": {
+        "version": "2.0.2"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
+    "psr/http-server-handler": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "react/cache": {
+        "version": "v1.0.0"
+    },
+    "react/child-process": {
+        "version": "v0.6.1"
+    },
+    "react/dns": {
+        "version": "v1.2.0"
+    },
+    "react/event-loop": {
+        "version": "v1.1.0"
+    },
+    "react/http": {
+        "version": "v0.8.5"
+    },
+    "react/promise": {
+        "version": "v2.7.1"
+    },
+    "react/promise-stream": {
+        "version": "v1.2.0"
+    },
+    "react/promise-timer": {
+        "version": "v1.5.1"
+    },
+    "react/socket": {
+        "version": "v1.3.0"
+    },
+    "react/stream": {
+        "version": "v1.1.0"
+    },
+    "ringcentral/psr7": {
+        "version": "1.2.2"
     },
     "symfony/cache": {
         "version": "v4.4.2"
