@@ -9,6 +9,6 @@ delete_user:
     methods: DELETE
 
 save_user:
-    path: /users
+    path: /users/{id}
     controller: App\Controller\Command\SaveUserController
-    methods: POST
+    methods: PUT

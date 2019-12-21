@@ -25,7 +25,7 @@ class SaveUserController
 
         $this->commandBus->handle(
             new SaveUser(
-                $content['id'],
+                $request->get('id'),
                 $content['name']
             )
         );
