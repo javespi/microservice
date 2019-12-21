@@ -29,3 +29,7 @@ services:
         resource: '../src/QueryHandler'
         tags:
             - {name: 'tactician.handler', typehints: true}
+
+    Domain\Model\InMemoryUserRepository: ~
+    Domain\Model\UserRepository:
+        alias: Domain\Model\InMemoryUserRepository
