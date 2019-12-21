@@ -9,6 +9,7 @@
         "doctrine/dbal": "^2.10",
         "doctrine/doctrine-bundle": "^2.0",
         "league/tactician-bundle": "^1.1",
+        "php-amqplib/php-amqplib": "^2.11",
         "php-pm/httpkernel-adapter": "^2.0",
         "php-pm/php-pm": "^2.0",
         "symfony/console": "4.4.*",

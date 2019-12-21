@@ -98,6 +98,9 @@
     "php": {
         "version": "7.4"
     },
+    "php-amqplib/php-amqplib": {
+        "version": "v2.11.0"
+    },
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
     },
@@ -106,6 +109,9 @@
     },
     "php-pm/php-pm": {
         "version": "2.0.2"
+    },
+    "phpseclib/phpseclib": {
+        "version": "2.0.23"
     },
     "psr/cache": {
         "version": "1.0.1"
