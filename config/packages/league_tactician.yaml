@@ -5,5 +5,5 @@ tactician:
     commandbus:
         query:
             middleware:
-                - App\Middleware\AgeMiddleware
+                - App\Middleware\DummyMiddleware
                 - tactician.middleware.command_handler

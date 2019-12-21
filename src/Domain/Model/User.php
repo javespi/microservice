@@ -12,9 +12,6 @@ class User
     /** @var string */
     private $name;
 
-    /** @var array */
-    public $attr = [];
-
     public function __construct(string $id, string $name)
     {
         $this->id = $id;
