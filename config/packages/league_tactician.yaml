@@ -7,3 +7,7 @@ tactician:
             middleware:
                 - App\Middleware\DummyMiddleware
                 - tactician.middleware.command_handler
+        command:
+            middleware:
+                - App\Middleware\DummyMiddleware
+                - tactician.middleware.command_handler

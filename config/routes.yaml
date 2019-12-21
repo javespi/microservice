@@ -1,4 +1,14 @@
 get_user:
     path: /users/{id}
-    controller: App\Controller\GetUserController
+    controller: App\Controller\Query\GetUserController
     methods: GET
+
+delete_user:
+    path: /users/{id}
+    controller: App\Controller\Command\DeleteUserController
+    methods: DELETE
+
+save_user:
+    path: /users
+    controller: App\Controller\Command\SaveUserController
+    methods: POST

@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Controller\Command;
 
-use App\Query\GetUser;
+use App\Command\SaveUser;
 use League\Tactician\CommandBus;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class GetUserController
+class SaveUserController
 {
     /* @var CommandBus */
     private $commandBus;
@@ -22,16 +21,15 @@ class GetUserController
 
     public function __invoke(Request $request): Response
     {
-        $user = $this->commandBus->handle(
-            new GetUser(
-                $request->get('id')
+        $content = json_decode($request->getContent(), true);
+
+        $this->commandBus->handle(
+            new SaveUser(
+                $content['id'],
+                $content['name']
             )
         );
 
-        return new JsonResponse([
-            'id' => $user->id(),
-            'name' => $user->name(),
-            'att' => $user->attr,
-        ]);
+        return new Response(null);
     }
 }

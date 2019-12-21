@@ -19,14 +19,27 @@ services:
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller'
+    App\Controller\Query\:
+        resource: '../src/Controller/Query'
         tags: ['controller.service_arguments']
+        arguments:
+            - '@tactician.commandbus.query'
+
+    App\Controller\Command\:
+        resource: '../src/Controller/Command'
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@tactician.commandbus.command'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
     App\QueryHandler\:
         resource: '../src/QueryHandler'
+        tags:
+            - {name: 'tactician.handler', typehints: true}
+
+    App\CommandHandler\:
+        resource: '../src/CommandHandler'
         tags:
             - {name: 'tactician.handler', typehints: true}
 
