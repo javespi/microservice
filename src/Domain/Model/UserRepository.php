@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Domain\Model;
 
 use Domain\Exceptions\UserNotFoundException;
@@ -13,8 +15,5 @@ interface UserRepository
 
     public function save(User $user): void;
 
-    /**
-     * @throws UserNotFoundException
-     */
     public function delete(string $id): void;
 }
