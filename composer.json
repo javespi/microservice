@@ -5,6 +5,7 @@
         "php": "^7.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-json": "*",
         "league/tactician-bundle": "^1.1",
         "php-pm/httpkernel-adapter": "^2.0",
         "php-pm/php-pm": "^2.0",
