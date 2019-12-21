@@ -36,7 +36,6 @@ class GetUserController
         return new JsonResponse([
             'id' => $user->id(),
             'name' => $user->name(),
-            'att' => $user->attr,
         ]);
     }
 }
