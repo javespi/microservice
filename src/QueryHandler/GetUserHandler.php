@@ -1,14 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\QueryHandler;
 
-use Domain\Model\User;
 use App\Query\GetUser;
+use Domain\Model\User;
+use Domain\Model\UserRepository;
 
 class GetUserHandler
 {
+    private $userRepository;
+
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
     public function handle(GetUser $query): User
     {
-        return new User($query->id(), 'Bob');
+        return $this->userRepository->findById(
+            $query->id()
+        );
     }
 }
