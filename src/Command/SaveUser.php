@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-class SaveUser
+class SaveUser implements AsyncCommand
 {
     /** @var string */
     private $id;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Infra\Doctrine\Repository;
 
 use Doctrine\DBAL\Connection;
@@ -47,7 +49,7 @@ final class DoctrineUserRepository implements UserRepository
                 ->where('id = :id')
                 ->setParameters([
                     'id' => $user->id(),
-                    'name' => $user->name()
+                    'name' => $user->name(),
                 ])
                 ->execute();
         } catch (UserNotFoundException $exception) {
@@ -55,12 +57,12 @@ final class DoctrineUserRepository implements UserRepository
                 ->createQueryBuilder()
                 ->insert('users')
                 ->values([
-                    'id'  => '?',
+                    'id' => '?',
                     'name' => '?',
                 ])
                 ->setParameters([
                     $user->id(),
-                    $user->name()
+                    $user->name(),
                 ])
                 ->execute();
         }

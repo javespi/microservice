@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace tests\Infra\Doctrine\Repository;
 
 use Doctrine\DBAL\Configuration;
@@ -29,7 +31,7 @@ class DoctrineUserRepositoryTest extends UserRepositoryTest
             $connection->getDatabasePlatform()
         );
 
-        foreach ($sql as $query){
+        foreach ($sql as $query) {
             $connection->executeQuery($query);
         }
 

@@ -8,4 +8,8 @@ tactician:
                 - tactician.middleware.command_handler
         command:
             middleware:
+                - Infra\Amqp\AsyncMiddleware
+                - tactician.middleware.command_handler
+        async_command:
+            middleware:
                 - tactician.middleware.command_handler

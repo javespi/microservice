@@ -50,3 +50,18 @@ services:
 
     Domain\Model\UserRepository:
         alias: Infra\Doctrine\Repository\DoctrineUserRepository
+
+    PhpAmqpLib\Connection\AMQPConnection:
+        arguments:
+            - amqp
+            - 5672
+            - 'guest'
+            - 'guest'
+
+    PhpAmqpLib\Channel\AMQPChannel:
+        factory:
+            - '@PhpAmqpLib\Connection\AMQPConnection'
+            - channel
+
+    Infra\Amqp\:
+        resource: '../src/Amqp'
