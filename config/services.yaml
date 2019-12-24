@@ -53,7 +53,7 @@ services:
 
     PhpAmqpLib\Connection\AMQPConnection:
         arguments:
-            - amqp
+            - aragorn
             - 5672
             - 'guest'
             - 'guest'

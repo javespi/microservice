@@ -10,5 +10,5 @@ doctrine:
                 driver: pdo_mysql
                 user: root
                 password: root
-                host: mysql2
+                host: gandalf
                 dbname: microservice

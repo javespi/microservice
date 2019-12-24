@@ -34,14 +34,16 @@ class CommandConsumer extends Command
             '',
             false,
             true,
-            function (AMQPMessage $meesage): void {
+            false,
+            false,
+            function (AMQPMessage $message): void {
                 $this->commandBus->handle(
-                    unserialize($meesage->getBody())
+                    unserialize($message->getBody())
                 );
             }
         );
 
-        while(count($this->channel->callbacks)){
+        while (count($this->channel->callbacks)) {
             $this->channel->wait();
         }
     }
