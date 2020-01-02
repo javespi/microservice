@@ -49,7 +49,7 @@ services:
             - '@doctrine.dbal.microservice_connection'
 
     Domain\Model\UserRepository:
-        alias: Infra\Doctrine\Repository\DoctrineUserRepository
+        alias: Microservice\Infrastructure\Repository\Doctrine\DoctrineUserRepository
 
     PhpAmqpLib\Connection\AMQPConnection:
         arguments:

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Infra\Doctrine\Repository;
+namespace Microservice\Infrastructure\Repository\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Microservice\Domain\User\User;

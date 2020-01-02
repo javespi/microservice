@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Infra\Amqp;
+namespace Microservice\Infrastructure\Middleware\Amqp;
 
 use App\Command\AsyncCommand;
 use League\Tactician\Middleware;

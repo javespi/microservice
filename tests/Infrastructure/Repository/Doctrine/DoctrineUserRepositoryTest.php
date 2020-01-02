@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace tests\Infra\Doctrine\Repository;
+namespace tests\Microservice\Infrastructure\Repository\Doctrine;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
-use Infra\Doctrine\Repository\DoctrineUserRepository;
 use Microservice\Domain\User\UserRepository;
+use Microservice\Infrastructure\Repository\Doctrine\DoctrineUserRepository;
 use tests\Microservice\Domain\User\UserRepositoryTest;
 
 class DoctrineUserRepositoryTest extends UserRepositoryTest

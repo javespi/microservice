@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Infra\Amqp;
+namespace Microservice\Infrastructure\Consumer\Amqp;
 
 use League\Tactician\CommandBus;
 use PhpAmqpLib\Channel\AMQPChannel;

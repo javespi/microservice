@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Query;
+namespace Microservice\Infrastructure\Controller\Query;
 
 use App\Query\GetUser;
 use League\Tactician\CommandBus;

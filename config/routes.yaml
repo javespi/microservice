@@ -1,14 +1,14 @@
 get_user:
     path: /users/{id}
-    controller: App\Controller\Query\GetUserController
+    controller: Microservice\Infrastructure\Controller\Query\GetUserController
     methods: GET
 
 delete_user:
     path: /users/{id}
-    controller: App\Controller\Command\DeleteUserController
+    controller: Microservice\Infrastructure\Controller\Command\DeleteUserController
     methods: DELETE
 
 save_user:
     path: /users/{id}
-    controller: App\Controller\Command\SaveUserController
+    controller: Microservice\Infrastructure\Controller\Command\SaveUserController
     methods: PUT

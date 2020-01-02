@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Command;
+namespace Microservice\Infrastructure\Controller\Command;
 
 use App\Command\DeleteUser;
 use League\Tactician\CommandBus;

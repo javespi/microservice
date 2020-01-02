@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Microservice\Domain\User;
 
-use Microservice\Domain\User\UserNotFoundException;
-
 interface UserRepository
 {
     /**
