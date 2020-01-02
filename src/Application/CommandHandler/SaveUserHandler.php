@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\CommandHandler;
+namespace Microservice\Application\CommandHandler;
 
-use App\Command\SaveUser;
+use Microservice\Application\Command\SaveUser;
 use Microservice\Domain\User\User;
 use Microservice\Domain\User\UserRepository;
 

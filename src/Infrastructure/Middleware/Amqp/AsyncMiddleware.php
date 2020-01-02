@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Microservice\Infrastructure\Middleware\Amqp;
 
-use App\Command\AsyncCommand;
 use League\Tactician\Middleware;
+use Microservice\Application\Command\AsyncCommand;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
 

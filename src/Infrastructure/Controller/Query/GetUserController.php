@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Microservice\Infrastructure\Controller\Query;
 
-use App\Query\GetUser;
 use League\Tactician\CommandBus;
+use Microservice\Application\Query\GetUser;
 use Microservice\Domain\User\UserNotFoundException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

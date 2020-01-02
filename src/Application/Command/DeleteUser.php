@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Query;
+namespace Microservice\Application\Command;
 
-class GetUser
+class DeleteUser
 {
     /** @var string */
     private $id;

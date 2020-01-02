@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Microservice\Infrastructure\Controller\Command;
 
-use App\Command\DeleteUser;
 use League\Tactician\CommandBus;
+use Microservice\Application\Command\DeleteUser;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

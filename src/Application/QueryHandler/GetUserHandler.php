@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\CommandHandler;
+namespace Microservice\Application\QueryHandler;
 
-use App\Command\DeleteUser;
+use Microservice\Application\Query\GetUser;
+use Microservice\Domain\User\User;
 use Microservice\Domain\User\UserRepository;
 
-class DeleteUserHandler
+class GetUserHandler
 {
     private $userRepository;
 
@@ -16,9 +17,9 @@ class DeleteUserHandler
         $this->userRepository = $userRepository;
     }
 
-    public function handle(DeleteUser $query): void
+    public function handle(GetUser $query): User
     {
-        $this->userRepository->delete(
+        return $this->userRepository->findById(
             $query->id()
         );
     }
