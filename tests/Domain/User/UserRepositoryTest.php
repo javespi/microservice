@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace tests\Domain\Model;
+namespace tests\Microservice\Domain\User;
 
-use Domain\Exceptions\UserNotFoundException;
-use Domain\Model\User;
-use Domain\Model\UserRepository;
+use Microservice\Domain\User\User;
+use Microservice\Domain\User\UserNotFoundException;
+use Microservice\Domain\User\UserRepository;
 use PHPUnit\Framework\TestCase;
 
 abstract class UserRepositoryTest extends TestCase

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\CommandHandler;
 
 use App\Command\SaveUser;
-use Domain\Model\User;
-use Domain\Model\UserRepository;
+use Microservice\Domain\User\User;
+use Microservice\Domain\User\UserRepository;
 
 class SaveUserHandler
 {

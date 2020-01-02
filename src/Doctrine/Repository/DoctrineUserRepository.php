@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Infra\Doctrine\Repository;
 
 use Doctrine\DBAL\Connection;
-use Domain\Exceptions\UserNotFoundException;
-use Domain\Model\User;
-use Domain\Model\UserRepository;
+use Microservice\Domain\User\User;
+use Microservice\Domain\User\UserNotFoundException;
+use Microservice\Domain\User\UserRepository;
 
 final class DoctrineUserRepository implements UserRepository
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace tests\Domain\Model;
+namespace tests\Microservice\Domain\User;
 
-use Domain\Model\InMemoryUserRepository;
-use Domain\Model\UserRepository;
+use Microservice\Domain\User\InMemoryUserRepository;
+use Microservice\Domain\User\UserRepository;
 
 class InMemoryUserRepositoryTest extends UserRepositoryTest
 {

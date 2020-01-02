@@ -6,9 +6,9 @@ namespace tests\Infra\Doctrine\Repository;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
-use Domain\Model\UserRepository;
 use Infra\Doctrine\Repository\DoctrineUserRepository;
-use tests\Domain\Model\UserRepositoryTest;
+use Microservice\Domain\User\UserRepository;
+use tests\Microservice\Domain\User\UserRepositoryTest;
 
 class DoctrineUserRepositoryTest extends UserRepositoryTest
 {

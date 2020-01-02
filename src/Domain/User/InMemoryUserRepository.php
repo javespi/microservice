@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Domain\Model;
+namespace Microservice\Domain\User;
 
-use Domain\Exceptions\UserNotFoundException;
+use Microservice\Domain\User\UserNotFoundException;
 
 class InMemoryUserRepository implements UserRepository
 {

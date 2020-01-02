@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\CommandHandler;
 
 use App\Command\DeleteUser;
-use Domain\Model\UserRepository;
+use Microservice\Domain\User\UserRepository;
 
 class DeleteUserHandler
 {

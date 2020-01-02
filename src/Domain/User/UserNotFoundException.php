@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Domain\Exceptions;
+namespace Microservice\Domain\User;
 
 class UserNotFoundException extends \DomainException
 {

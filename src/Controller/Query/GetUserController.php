@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controller\Query;
 
 use App\Query\GetUser;
-use Domain\Exceptions\UserNotFoundException;
 use League\Tactician\CommandBus;
+use Microservice\Domain\User\UserNotFoundException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
