@@ -11,7 +11,8 @@ RUN apk --no-cache add \
     php7-bcmath php7-pcntl php7-redis php7-json \
     php7-phar php7-mbstring php7-openssl php7-xml \
     php7-tokenizer php7-dom php7-xmlwriter php7-posix \
-    php7-sockets php7-ctype php7-iconv php7-pdo php7-pdo_mysql
+    php7-sockets php7-ctype php7-iconv php7-pdo \
+    php7-pdo_mysql php7-pdo_sqlite
 
 #
 # Composer
@@ -30,5 +31,5 @@ RUN cd /var/www/microservice && \
 
 COPY docker/* /
 
-EXPOSE 8200
+EXPOSE 8000
 CMD ["sh", "/server-entrypoint.sh"]

@@ -19,37 +19,43 @@ services:
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
-    App\Controller\Query\:
-        resource: '../src/Controller/Query'
+    Microservice\Infrastructure\Controller\Query\:
+        resource: '../../Controller/Query'
         tags: ['controller.service_arguments']
         arguments:
             - '@tactician.commandbus.query'
 
-    App\Controller\Command\:
-        resource: '../src/Controller/Command'
+    Microservice\Infrastructure\Controller\Command\:
+        resource: '../../Controller/Command'
         tags: ['controller.service_arguments']
         arguments:
             - '@tactician.commandbus.command'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\QueryHandler\:
-        resource: '../src/QueryHandler'
+    Microservice\Application\QueryHandler\:
+        resource: '../../../Application/QueryHandler'
         tags:
             - {name: 'tactician.handler', typehints: true}
 
-    App\CommandHandler\:
-        resource: '../src/CommandHandler'
+    Microservice\Application\CommandHandler\:
+        resource: '../../../Application/CommandHandler'
         tags:
             - {name: 'tactician.handler', typehints: true}
 
-    Domain\Model\InMemoryUserRepository: ~
-    Infra\Doctrine\Repository\DoctrineUserRepository:
+    Microservice\Domain\User\InMemoryUserRepository: ~
+    Microservice\Infrastructure\Repository\Doctrine\DoctrineUserRepository:
         arguments:
             - '@doctrine.dbal.microservice_connection'
 
-    Domain\Model\UserRepository:
+    Microservice\Domain\User\UserRepository:
         alias: Microservice\Infrastructure\Repository\Doctrine\DoctrineUserRepository
+
+    Microservice\Infrastructure\Consumer\Amqp\:
+        resource: '../../Consumer/Amqp'
+
+    Microservice\Infrastructure\Middleware\Amqp\:
+        resource: '../../Middleware/Amqp'
 
     PhpAmqpLib\Connection\AMQPConnection:
         arguments:
@@ -63,10 +69,7 @@ services:
             - '@PhpAmqpLib\Connection\AMQPConnection'
             - channel
 
-    Infra\Amqp\:
-        resource: '../src/Amqp'
-
-    Infra\Amqp\CommandConsumer:
+    Microservice\Infrastructure\Consumer\Amqp\CommandConsumer:
         arguments:
             - '@PhpAmqpLib\Channel\AMQPChannel'
             - '@tactician.commandbus.async_command'

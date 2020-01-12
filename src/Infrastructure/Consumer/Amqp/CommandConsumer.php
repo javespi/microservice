@@ -28,6 +28,7 @@ class CommandConsumer extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
+        $this->channel->queue_declare('commands', false, true);
         $this->channel->basic_qos(0, 1, false);
         $this->channel->basic_consume(
             'commands',

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Microservice\Infrastructure\Kernel\Kernel;
+use Microservice\Infrastructure\Framework\Kernel;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 

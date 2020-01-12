@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Microservice\Infrastructure\Kernel\Kernel;
+use Microservice\Infrastructure\Framework\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\ErrorHandler\Debug;
@@ -27,7 +27,7 @@ if ($input->hasParameterOption('--no-debug', true)) {
     putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');
 }
 
-require dirname(__DIR__).'/config/bootstrap.php';
+require dirname(__DIR__) . '/src/Infrastructure/Framework/config/bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
